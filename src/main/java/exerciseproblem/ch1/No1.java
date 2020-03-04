@@ -49,11 +49,40 @@ public class No1 {
         }
         System.out.println();
 
+        //정수의 역수를 16진 출력
+
+        ArrayList<Integer> hexList = new ArrayList<>();
+
+        int forhex = input;
+
+        do{
+            hexList.add(forhex % 16);
+            forhex /= 16;
+        }while(forhex != 0);
+
+        Collections.reverse(hexList);
+        System.out.println(hexList.size());
+
+        System.out.print("hex : ");
+
+        for(int i : hexList){
+            System.out.print(transfer(i)+" ");
+        }
+        System.out.println();
+
         //정수의 역수를 16진 부동소수점 수로 출력하라.
 
-        //
+    }
 
-
-
+    public static String transfer(int v) {
+        switch (v) {
+            case 10 : return "A";
+            case 11 : return "B";
+            case 12 : return "C";
+            case 13 : return "D";
+            case 14 : return "E";
+            case 15 : return "F";
+            default : return v+"";
+        }
     }
 }
