@@ -1,4 +1,4 @@
-package exercise;
+package exercise.Ch1;
 
 import com.sun.tools.javac.util.List;
 
@@ -9,7 +9,7 @@ import java.math.BigInteger;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class Ch1 {
+public class Main {
 
     public static void main(String[] args) {
 //        System.out.println("hello World");
