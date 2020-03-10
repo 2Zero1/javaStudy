@@ -12,7 +12,7 @@ public class Main {
         System.out.println(employee.getName());
     }
     public static Measurable largest(Measurable[] objects) {
-        //키 추출 함수를 사용하였고, 비교자를 함께 넣어 어떻게 정렬 할것인지 결정하였음.
+        //키 추출 함수(Comparator.comparing)를 사용하였고, 비교자를 함께 넣어 어떻게 역으로 정렬하도록 하였음.
         Arrays.sort(objects, Comparator.comparing(Measurable::getMeasure,(s, t) -> Double.compare(t, s)));
 
         return objects[0];
