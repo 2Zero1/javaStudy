@@ -305,14 +305,14 @@ public class Main {
 //        System.out.println(in.nextLine());
 //        try {
 //            URL[] urls = {
-//                    new URL("file:///Users/iyeonghan/YH/Often/project/coreJava9/src/main/java/exercise/Ch4/library.jar")};
-//            File file = new File("/Users/iyeonghan/YH/Often/project/coreJava9/src/main/java/exercise/Ch4/library.jar");
-//
-//            System.out.println("왜안되"+file.exists());
-//
-//            try (URLClassLoader loader = new URLClassLoader(urls)) {
-//                Class<?> cl2 = Class.forName("HelloWorld", true, loader);
-//            }
+////                    new URL("file:///Users/iyeonghan/YH/Often/project/coreJava9/src/main/java/exercise/Ch4/library.jar")};
+////            File file = new File("/Users/iyeonghan/YH/Often/project/coreJava9/src/main/java/exercise/Ch4/library.jar");
+////
+////            System.out.println("왜안되"+file.exists());
+////
+////            try (URLClassLoader loader = new URLClassLoader(urls)) {
+////                Class<?> cl2 = Class.forName("HelloWorld", true, loader);
+////            }
 
 //        } catch (MalformedURLException e) {
 //            e.printStackTrace();
@@ -460,6 +460,17 @@ public class Main {
 
 //        Arrays.binarySearch()
 
+
+        Person[] asdf = new Person[10];
+        asdf[0] = new Person("aa") {
+            @Override
+            public int getId() {
+                return 0;
+            }
+        };
+        Object[] qq = (Object[])asdf;
+        Person[] aaaa = (Person[]) qq;
+        System.out.println(aaaa[0].getName());
 
     }
 

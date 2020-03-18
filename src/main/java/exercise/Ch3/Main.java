@@ -1,6 +1,8 @@
 package exercise.Ch3;
 
 
+import exercise.Ch4.Test;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.image.BufferedImage;
@@ -185,6 +187,10 @@ public class Main {
         stream = names.stream().map(Employee::new);
 
         Employee[] buttons = stream.toArray(Employee[]::new);
+        System.out.println("뭐냐잉");
+        for (Employee item : buttons) {
+            System.out.println(item.getName());
+        }
 
 //        repeat(10, () -> System.out.println("Hello, World"));
         repeat(10, i -> System.out.println("CountDown: "+ (9 - i)));
@@ -259,7 +265,6 @@ public class Main {
         for(Employee item : employee5) {
             System.out.println(item.getName());
         }
-
 
 
 
