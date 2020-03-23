@@ -1,6 +1,6 @@
 package exercise.Ch4;
 
-public class Employee implements Cloneable{
+public class Employee implements Cloneable, Comparable<Employee>{
     protected double salary;
     private Manager manager;
     private String name;
@@ -52,4 +52,10 @@ public class Employee implements Cloneable{
         return this.manager;
     }
 
+    @Override
+    public int compareTo(Employee o) {
+        System.out.println(Double.compare(this.getSalary(),o.getSalary()));
+        System.out.println("z");
+        return Double.compare(this.getSalary(),o.getSalary());
+    }
 }

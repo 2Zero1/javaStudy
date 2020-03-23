@@ -12,6 +12,14 @@ public class Item {
         this.price = price;
     }
 
+    public double getPrice() {
+        return price;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
     @Override
     public boolean equals(Object obj) {
         //두 객체가 동일한지 알아보는 빠른 검사. 참조가 같은지 검사.

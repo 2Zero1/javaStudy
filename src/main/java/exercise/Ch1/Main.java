@@ -1,16 +1,16 @@
 package exercise.Ch1;
 
-import com.sun.tools.javac.util.List;
 
 import java.io.Console;
 import java.lang.reflect.Array;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
 
 public class Main {
-
+    int abbs = 0;
     public static void main(String[] args) {
 //        System.out.println("hello World");
 //
@@ -509,6 +509,53 @@ public class Main {
 //        ArrayList<String> greinds = new ArrayList<>(List.of(names));
         String[] names = kk.toArray(new String[0]);
         System.out.println(Arrays.toString(names));
+
+        int a = 10 >>>1;
+        System.out.println(true | false);
+//        System.out.println(b);
+
+//        Test test = new Test();
+//        String e = "Hello";
+//
+//        System.out.println("Hello"==e);
+//        System.out.println("Hello"==test.a);
+//        System.out.println("Hello"==Test.b);
+//        String heel = "Hello World";
+//
+//        System.out.println(heel.substring(0,5) == "Hello");
+//        System.out.println(Integer.toString(10));
+//
+//        int codePoint = e.codePointAt(e.offsetByCodePoints(0,1));
+//        System.out.println(codePoint);
+//        int length = e.codePointCount(0,e.length());
+//        System.out.println(length);
+
+//        Scanner scanner = new Scanner(System.in);
+//        do{
+//            System.out.println(scanner.next());
+//        }while(scanner.hasNext());
+
+        System.out.printf("%d0", 10);
+        switch ("ssa") {
+            case "Hello" : System.out.println("ok");
+            break;
+            case "ss" : System.out.println("not");
+            break;
+            default: System.out.println("not at all");
+        }
+
+        String[] kkk = {"a","b","c"};
+        ArrayList<String> arrayList = new ArrayList<>(List.of(kkk));
+        kkk[1] = "2";
+        String[] kks = arrayList.toArray(new String[0]);
+        int [] array = {1,2,3};
+        ArrayList<Integer> arrayList1 = new ArrayList<>(List.of(1,2,3));
+        arrayList1.forEach(System.out::println);
+
+
+        Network network = new Network();
+        network.new Member();
+
     }
     public static void average(double... values) {
         System.out.println(Arrays.toString(values));

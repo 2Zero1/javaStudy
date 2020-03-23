@@ -10,6 +10,11 @@ public class DiscountedItem extends Item {
     }
 
     @Override
+    public double getPrice() {
+        return super.getPrice() - this.discount;
+    }
+
+    @Override
     public boolean equals(Object obj) {
         if (!super.equals(obj)) return false;
         if(this.getClass().equals(super.getClass())){
