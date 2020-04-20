@@ -54,6 +54,9 @@ public class Main {
         for (Manager employee : managers1){
             System.out.println(employee.getName());
         }
+
+        printAll2(employees, (v) -> v.getName().equals("name"));
+
 //        for (Manager employee : (Manager[]) employees){
 //            System.out.println(employee.getName());
 //        }
@@ -113,6 +116,7 @@ public class Main {
 
         entries.forEach(x -> { System.out.println(x.getKey());});
 
+        exercise.Ch6.Employee.class.getConstructor().newInstance();
 
     }
 
@@ -173,6 +177,12 @@ public class Main {
 
     public static <T extends Comparable<T>> void sort(List<T> list) {
 
+    }
+
+    public static <T> void printAll2(T[] elements, Predicate<T> filter) {
+        for (T e : elements)
+            if (filter.test(e))
+                System.out.println("hehet"+e.toString());
     }
 
     public static <T> void printAll(T[] elements, Predicate<? super T> filter) {
